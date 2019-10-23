@@ -6,7 +6,7 @@ if (isset($_POST['lat'],$_POST['lng'])) {
    $latVal = $_POST['lat'];
    $lngVal = $_POST['lng'];
 
-   $rootTag = $xml->getElementByTagName("visitors")->item(0);
+   $rootTag = $xml->getElementsByTagName("visitors")->item(0);
 
       $visitor = $xml->createElement("visitor");
 
