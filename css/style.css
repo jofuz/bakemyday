@@ -1,0 +1,353 @@
+/*
+version: v1.0
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#mob-menu {
+    display: none;
+}
+
+.movedown-80 {
+    position: relative;
+    top: 80px;
+}
+
+nav {
+    width: 100%;
+    text-align: center;
+    height: 80px;
+    background-color: #ffb2b5;
+    position: fixed;
+    z-index: 1;
+}
+
+nav .logo {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: bold;
+    float: left;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 32px;
+    color: #333;
+}
+
+nav ul {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 27px;
+    text-align: right;
+}
+
+nav li:first-of-type {
+    margin-left: 0px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content {
+    padding: 40px 80px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+nav .content {
+    padding: 0px 80px!important;
+}
+
+.parallax {
+    height: 350px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home.parallax {
+    background-image: url("../assets/bake-my-day.jpg");
+    background-position: 90% 55%;
+    background-size: 120%;
+}
+
+.about.parallax {
+    background-image: url("../assets/home-parallax.jpg");
+    background-position: 90% 55%;
+    background-size: 120%;
+}
+
+.dark-filter {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: block;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.parallax>* {
+    color: #ffb2b5;
+}
+
+.parallax h1 {
+    text-shadow: 2px 2px 0px #000;
+    font-size: 42px;
+    margin-top: 15%;
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
+}
+
+.parallax h2 {
+    text-shadow: 2px 2px 0px #000;
+    font-family: 'Fredericka the Great', cursive;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+}
+
+.half {
+    width: 48%;
+    display: inline-block;
+}
+
+.half:nth-of-type(2n) {
+    margin-left: 4%;
+}
+
+.third {
+    width: 33%;
+    display: inline-block;
+    padding: 10px;
+}
+
+#gallery img {
+    height: 150px;
+}
+
+footer .fab {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+footer .fab:first-of-type {
+    margin-left: 0;
+}
+
+table {
+    text-align: left;
+    width: 100%;
+}
+
+table tr:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+table tr th {
+    background-color: #ffb2b5;
+}
+
+table tr th, table tr td {
+    padding: 5px 15px;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+}
+
+form .half {
+    width: 45%;
+}
+
+footer {
+    background-color: #666;
+    min-height: 150px;
+    width: 100%;
+    float: left;
+    clear: both;
+    box-sizing: border-box;
+}
+
+footer>*, footer ul li a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer #myCanvas {
+    margin: 0 auto;
+    position: relative;
+    bottom: -60px;
+}
+
+footer a:hover {
+    color: #ffb2b5;
+}
+
+footer #socials {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+    textarea {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1710px) {
+    .home.parallax {
+        background-position: 90% -50%;
+        background-size: 140%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .half {
+        width: 100%;
+        margin: 0;
+        display: block;
+    }
+    .half:nth-of-type(2n) {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .home.parallax {
+        background-position: 90% -10%;
+        background-size: 140%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav ul {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        padding-top: 0px;
+        padding-top: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    nav ul {
+        text-align: center;
+    }
+    #mob-menu {
+        height: 20px;
+        width: 40px;
+        position: relative;
+        left: 20px;
+        top: -12px;
+        display: block;
+    }
+    #mob-menu .bars {
+        height: 4px;
+        width: 40px;
+        margin-bottom: 4px;
+        background-color: #333;
+        display: block;
+    }
+    nav {
+        height: 60px;
+    }
+    nav .logo {
+        font-family: 'Fredericka the Great', cursive;
+        float: left;
+        padding: 5px;
+        margin-top: 10px;
+        margin-left: 0;
+        font-size: 32px;
+        color: #333;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    nav ul {
+        background-color: #ffb2b5;
+        width: 100%;
+    }
+    nav ul #menuBlock {
+        display: none;
+        height: 0px;
+        -moz-transition: all ease-in-out 2s;
+        -webkit-transition: all ease-in-out 2s;
+        -o-transition: all ease-in-out 2s;
+        transition: all ease-in-out 2s;
+    }
+    #mob-menu:hover>#menuBlock {
+        display: block;
+        height: auto;
+        transition: height linear 2s;
+    }
+    nav .content {
+        padding: 0px!important;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
+        text-align: center;
+        padding: 20px 40px;
+    }
+    .parallax {
+        height: 300px;
+    }
+    .home.parallax {
+        background-position: 90% -10%;
+        background-size: 250%;
+    }
+    .parallax h1 {
+        font-size: 32px;
+        margin-top: 40px;
+    }
+    .parallax h2 {
+        font-size: 24px;
+    }
+    .content {
+        padding: 40px 40px;
+    }
+}

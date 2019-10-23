@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html manifest="bakemyday.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The best bakery in Dublin">
+    <meta name="keywords" content="Baking, pastry, pastries, cakes, food">
+    <meta name="author" content="Joseph Scannell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
+    <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="content">
+            <span class="logo">Bake My Day</span>
+            <ul>
+                <span id="mob-menu" onclick="showMenu()">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <div id="menuBlock">
+                    <li class="menuItem"><a href="index.html">Home</a></li>
+                    <li class="menuItem"><a href="about.html">About Us</a></li>
+                    <li class="menuItem"><a href="gallery.html">Gallery</a></li>
+                    <li class="menuItem"><a href="prices.html">Prices</a></li>
+                    <li class="menuItem"><a href="contact.html">Contact Us</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="about parallax">
+        <div class="dark-filter">
+            <div class=" content">
+                <h1>About Us</h1>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h2>The best pastries in Dublin!</h2>
+        <p>Raclette sustainable you probably haven't heard of them swag retro, vegan skateboard iPhone. Cornhole
+            seitan
+            organic, direct trade truffaut echo park PBR&B coloring book vaporware knausgaard banjo raw denim
+            heirloom
+            fashion axe artisan. Neutra humblebrag tumblr activated charcoal XOXO. Sriracha thundercats schlitz
+            truffaut
+            cred, narwhal tacos hexagon 3 wolf moon bespoke hoodie. Direct trade flexitarian fanny pack enamel pin
+            schlitz waistcoat church-key narwhal locavore taiyaki synth.</p>
+        <p>Kickstarter vegan irony jianbing, farm-to-table food truck readymade. Neutra hot chicken direct trade
+            yuccie,
+            aute fam truffaut. 8-bit vegan flannel succulents try-hard kale chips tumblr consequat paleo viral umami
+            kombucha fashion axe tousled. Fanny pack try-hard viral cardigan, meggings sriracha minim.</p>
+        <!--<img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" alt="Vegan Sausage Rolls" />-->
+        <video width="320" height="240" controls>
+            <source src="assets/bakery.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <footer>
+        <div class="content">
+            <div class="half left">
+                <ul>
+                    <li><a href="tel:3538608600860">Phone: 086 0860 0860</a></li>
+                    <li><a href="mailto:hello@bakemyday.ie">Email: hello@bakemyday.ie</a></li>
+                    <li id="socials">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-facebook-square"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="half right">
+                <canvas id="myCanvas" width="550" height="100"></canvas>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

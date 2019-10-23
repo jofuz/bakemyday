@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html manifest="bakemyday.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The best bakery in Dublin">
+    <meta name="keywords" content="Baking, pastry, pastries, cakes, food">
+    <meta name="author" content="Joseph Scannell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="content">
+            <span class="logo">Bake My Day</span>
+            <ul>
+                <span id="mob-menu" onclick="showMenu()">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <div id="menuBlock">
+                    <li class="menuItem"><a href="index.html">Home</a></li>
+                    <li class="menuItem"><a href="about.html">About Us</a></li>
+                    <li class="menuItem"><a href="gallery.html">Gallery</a></li>
+                    <li class="menuItem"><a href="prices.html">Prices</a></li>
+                    <li class="menuItem"><a href="contact.html">Contact Us</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="about parallax">
+        <div class="dark-filter">
+            <div class=" content">
+                <h1 class="logo">Gallery</h1>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+         <h2>Take a look at our delicious baked goods </h2>
+          <!-- Images used to open the lightbox -->
+          <div class="row" id="gallery">
+            <div class="column">
+                <img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/Carousel-Carlos_2-1440x620.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/home-parallax.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/bake-my-day.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="assets/Carousel-Carlos_2-1440x620.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="assets/home-parallax.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="assets/bake-my-day.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="column">
+                    <img class="demo" src="assets/vegan-sausage-rolls-closeup_600x450.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="assets/Carousel-Carlos_2-1440x620.jpg" onclick="currentSlide(2)" alt="Snow">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="assets/home-parallax.jpg" onclick="currentSlide(3)" alt="Mountains">
+                </div>
+
+                <div class="column">
+                    <img class="demo" src="assets/bake-my-day.jpg" onclick="currentSlide(4)" alt="Lights">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="content">
+            <div class="half left">
+                <ul>
+                    <li><a href="tel:3538608600860">Phone: 086 0860 0860</a></li>
+                    <li><a href="mailto:hello@bakemyday.ie">Email: hello@bakemyday.ie</a></li>
+                    <li id="socials">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-facebook-square"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="half right">
+                <canvas id="myCanvas" width="550" height="100"></canvas>
+            </div>
+        </div>
+    </footer>
+</body>
+    <script src="js/gallery.js"></script>
+</html>

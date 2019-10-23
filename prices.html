@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html manifest="bakemyday.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The best bakery in Dublin">
+    <meta name="keywords" content="Baking, pastry, pastries, cakes, food">
+    <meta name="author" content="Joseph Scannell">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/slideshow.css" />
+    <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="content">
+            <span class="logo">Bake My Day</span>
+            <ul>
+                <span id="mob-menu" onclick="showMenu()">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <div id="menuBlock">
+                    <li class="menuItem"><a href="index.html">Home</a></li>
+                    <li class="menuItem"><a href="about.html">About Us</a></li>
+                    <li class="menuItem"><a href="gallery.html">Gallery</a></li>
+                    <li class="menuItem"><a href="prices.html">Prices</a></li>
+                    <li class="menuItem"><a href="contact.html">Contact Us</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <div class="home parallax">
+        <div class="dark-filter">
+            <div class=" content">
+                <h1 class="logo">Prices & Specials</h1>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="half left">
+            <h2>Prices</h2>
+            <h3>Birthday Cakes</h3>
+            <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Servings</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Small</td>
+                    <td>1-6</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Medium</td>
+                    <td>2-8</td>
+                    <td>$25</td>
+                </tr>
+                <tr>
+                    <td>Large</td>
+                    <td>4-12</td>
+                    <td>$30</td>
+                </tr>
+            </table>
+            <h3>Pastries</h3>
+            <span class="underline"></span>
+            <table>
+                <tr>
+                    <th>Size</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Small Sausage Roll</td>
+                    <td>$1.00</td>
+                </tr>
+                <tr>
+                    <td>Small Vegan Sausage Roll</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td>Large Sausage Roll</td>
+                    <td>$1.50</td>
+                </tr>
+                <tr>
+                    <td>Large Vegan Sausage Roll</td>
+                    <td>$1.75</td>
+                </tr>
+            </table>
+        </div>
+        <div class="half right">
+            <h2>Specials</h2>
+            <button onclick="getSpecials()">Show me the specials</button>
+            <p id="test"></p>
+            <pre id="specials"></pre>
+
+        </div>
+    </div>
+    <footer>
+        <div class="content">
+            <div class="half left">
+                <ul>
+                    <li><a href="tel:3538608600860">Phone: 086 0860 0860</a></li>
+                    <li><a href="mailto:hello@bakemyday.ie">Email: hello@bakemyday.ie</a></li>
+                    <li id="socials">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-facebook-square"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="half right">
+                <canvas id="myCanvas" width="550" height="100"></canvas>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        function getSpecials() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "data/specials.txt", false);
+            xmlhttp.send();
+            document.getElementById("specials").innerHTML =
+                xmlhttp.responseText;
+        }
+    </script>
+</body>
+
+</html>
