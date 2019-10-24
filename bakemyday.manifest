@@ -3,11 +3,7 @@ CACHE MANIFEST
 
 CACHE:
 # webpages
-index.html
-contact.html
 gallery.html
-prices.html
-about.html
 
 # assets
 assets/bake-my-day.jpg
@@ -15,29 +11,28 @@ assets/bakery.mp4
 assets/Carousel-Carlos_2-1440x620.jpg
 assets/home-parallax.jpg
 assets/vegan-sausage-rolls-closeup_600x450.jpg
+assets/BakerHeader.jpg
+assets/cake-display.jpg
+assets/cakes-2.jpg
+assets/spongecakes.jpg
+assets/tarts.jpg
+assets/biscuits.jpg
 
 # css
 css/style.css
-css/slideshow.css
 css/gallery.css
 https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap
 
 
 # js
 js/functions.js
-js/geolocation.js
 js/gallery.js
-js/slideshow.js
-js/validation.js
-js/jquery-3.4.1.min.js
+
 
 #data
-data/specials.txt
-data/visitors.txt
 
 NETWORK:
-data/location.php
 
 
 FALLBACK:
-*
+

@@ -8,10 +8,10 @@
     <meta name="author" content="Joseph Scannell">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/slideshow.css" />
     <link rel="stylesheet" href="css/gallery.css">
     <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
             </ul>
         </div>
     </nav>
-    <div class="about parallax">
+    <div class="parallax">
         <div class="dark-filter">
             <div class=" content">
                 <h1 class="logo">Gallery</h1>
@@ -42,14 +42,14 @@
         </div>
     </div>
     <div class="content">
-         <h2>Take a look at our delicious baked goods </h2>
-          <!-- Images used to open the lightbox -->
-          <div class="row" id="gallery">
+        <h2>Take a look at our delicious baked goods </h2>
+        <!-- Images used to open the lightbox -->
+        <div class="row" id="gallery">
             <div class="column">
                 <img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
             </div>
             <div class="column">
-                <img src="assets/Carousel-Carlos_2-1440x620.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <img src="assets/Carousel-Carlos_2-1440x620.jpg" onclick="openModal();currentSlide(2)"class="hover-shadow">
             </div>
             <div class="column">
                 <img src="assets/home-parallax.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
@@ -57,60 +57,133 @@
             <div class="column">
                 <img src="assets/bake-my-day.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
             </div>
-        </div>
-
-        <!-- The Modal/Lightbox -->
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="mySlides">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">2 / 4</div>
-                    <img src="assets/Carousel-Carlos_2-1440x620.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="assets/home-parallax.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="assets/bake-my-day.jpg" style="width:100%">
-                </div>
-
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- Caption text -->
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-
-                <!-- Thumbnail image controls -->
-                <div class="column">
-                    <img class="demo" src="assets/vegan-sausage-rolls-closeup_600x450.jpg" onclick="currentSlide(1)" alt="Nature">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="assets/Carousel-Carlos_2-1440x620.jpg" onclick="currentSlide(2)" alt="Snow">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="assets/home-parallax.jpg" onclick="currentSlide(3)" alt="Mountains">
-                </div>
-
-                <div class="column">
-                    <img class="demo" src="assets/bake-my-day.jpg" onclick="currentSlide(4)" alt="Lights">
-                </div>
+            <div class="column">
+                <img src="assets/cake-display.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/cakes2.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/spongecakes.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/tarts.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/BakerHeader.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
+            </div>
+            <div class="column">
+                <img src="assets/biscuits.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
             </div>
         </div>
+    </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 10</div>
+                <img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 10</div>
+                <img src="assets/Carousel-Carlos_2-1440x620.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 10</div>
+                <img src="assets/home-parallax.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 10</div>
+                <img src="assets/bake-my-day.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">5 / 10</div>
+                <img src="assets/BakerHeader.jpg" style="width:100%">
+            </div>
+            
+            <div class="mySlides">
+                <div class="numbertext">6 / 10</div>
+                <img src="assets/biscuits.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">7 / 10</div>
+                <img src="assets/cake-display.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">8 / 10</div>
+                <img src="assets/cakes2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">9 / 10</div>
+                <img src="assets/spongecakes.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">10 / 10</div>
+                <img src="assets/tarts.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="assets/vegan-sausage-rolls-closeup_600x450.jpg" onclick="currentSlide(1)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/Carousel-Carlos_2-1440x620.jpg" onclick="currentSlide(2)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/home-parallax.jpg" onclick="currentSlide(3)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/bake-my-day.jpg" onclick="currentSlide(4)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/BakerHeader.jpg" onclick="currentSlide(5)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/biscuits.jpg" onclick="currentSlide(6)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/cake-display.jpg" onclick="currentSlide(7)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/cakes2.jpg" onclick="currentSlide(8)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/spongecakes.jpg" onclick="currentSlide(9)" alt="bakery">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="assets/tarts.jpg" onclick="currentSlide(10)" alt="bakery">
+            </div>
+        </div>
+    </div>
     </div>
     <footer>
         <div class="content">
@@ -131,5 +204,6 @@
         </div>
     </footer>
 </body>
-    <script src="js/gallery.js"></script>
+<script src="js/gallery.js"></script>
+
 </html>

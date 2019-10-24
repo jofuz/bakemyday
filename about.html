@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="bakemyday.manifest">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/slideshow.css" />
     <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+
 </head>
 
 <body>
@@ -33,7 +35,7 @@
             </ul>
         </div>
     </nav>
-    <div class="about parallax">
+    <div class="parallax">
         <div class="dark-filter">
             <div class=" content">
                 <h1>About Us</h1>
@@ -56,7 +58,8 @@
             kombucha fashion axe tousled. Fanny pack try-hard viral cardigan, meggings sriracha minim.</p>
         <!--<img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" alt="Vegan Sausage Rolls" />-->
         <video width="320" height="240" controls>
-            <source src="assets/bakery.mp4" type="video/mp4">
+            <!-- display video and use an image as the preview -->
+            <source src="assets/bakery.mp4" type="video/mp4" poster="assets/video-poster.png">
             Your browser does not support the video tag.
         </video>
     </div>

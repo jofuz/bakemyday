@@ -12,6 +12,7 @@
   .column {
     float: left;
     width: 25%;
+    contain: content;
   }
   
   /* The Modal (background) */
@@ -107,9 +108,12 @@
     color: white;
   }
   
+  /* image previews within lightbox modal */
   img.demo {
     opacity: 0.6;
-    height: 50px;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
   }
   
   .active,

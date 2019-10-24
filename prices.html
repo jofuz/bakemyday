@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="bakemyday.manifest">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/slideshow.css" />
     <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+
 </head>
 
 <body>
@@ -33,7 +35,7 @@
             </ul>
         </div>
     </nav>
-    <div class="home parallax">
+    <div class="parallax">
         <div class="dark-filter">
             <div class=" content">
                 <h1 class="logo">Prices & Specials</h1>
@@ -44,6 +46,7 @@
         <div class="half left">
             <h2>Prices</h2>
             <h3>Birthday Cakes</h3>
+            <!-- table layout for products -->
             <table>
                 <tr>
                     <th>Size</th>
@@ -93,8 +96,10 @@
         </div>
         <div class="half right">
             <h2>Specials</h2>
+            <!-- when clicked the getSpecials function from functions.js is run -->
             <button onclick="getSpecials()">Show me the specials</button>
             <p id="test"></p>
+            <!-- text from specials.txt are displayed here -->
             <pre id="specials"></pre>
 
         </div>

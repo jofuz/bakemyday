@@ -9,14 +9,17 @@ body {
     margin: 0;
 }
 
+/* style every element */
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* all divs */
 div {
     box-sizing: border-box;
 }
 
+/* .left .right are used to move elements to the left or right */
 .left {
     float: left;
 }
@@ -25,15 +28,19 @@ div {
     float: right;
 }
 
+/* hide the mobile menu*/
 #mob-menu {
     display: none;
 }
 
+/* fixed nav bar covers the first .content element, 
+this can be used to move the element down to be seen properly */
 .movedown-80 {
     position: relative;
     top: 80px;
 }
 
+/* nav bar */
 nav {
     width: 100%;
     text-align: center;
@@ -43,16 +50,17 @@ nav {
     z-index: 1;
 }
 
+/* logo within nav bar */
 nav .logo {
     font-family: 'Fredericka the Great', cursive;
     font-weight: bold;
     float: left;
-    padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 32px;
     color: #333;
 }
 
+/* nav menu container */
 nav ul {
     width: auto;
     margin: 0 auto;
@@ -61,16 +69,19 @@ nav ul {
     text-align: right;
 }
 
+/* first list item in nav menu reset to 0 margin left */
 nav li:first-of-type {
     margin-left: 0px;
 }
 
+/* remove the dotted list style, put them in a row and set the left margin to 15px*/
 nav li {
     list-style: none;
     display: inline-block;
     margin-left: 15px;
 }
 
+/* nav menu links use the same font as logo */
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -79,6 +90,7 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* the main container element */
 .content {
     padding: 40px 80px;
     width: 100%;
@@ -91,25 +103,18 @@ nav .content {
     padding: 0px 80px!important;
 }
 
+/* the header title area on every page */
 .parallax {
     height: 350px;
     width: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-.home.parallax {
     background-image: url("../assets/bake-my-day.jpg");
-    background-position: 90% 55%;
+    background-position: 90% 15%;
     background-size: 120%;
 }
 
-.about.parallax {
-    background-image: url("../assets/home-parallax.jpg");
-    background-position: 90% 55%;
-    background-size: 120%;
-}
-
+/* put a transparent filter on top of the header images */
 .dark-filter {
     background-color: rgba(0, 0, 0, 0.3);
     display: block;
@@ -118,10 +123,7 @@ nav .content {
     width: 100%;
 }
 
-.parallax>* {
-    color: #ffb2b5;
-}
-
+/* page header titles */
 .parallax h1 {
     text-shadow: 2px 2px 0px #000;
     font-size: 42px;
@@ -132,6 +134,7 @@ nav .content {
     color: #fff;
 }
 
+/* page header subtitles */
 .parallax h2 {
     text-shadow: 2px 2px 0px #000;
     font-family: 'Fredericka the Great', cursive;
@@ -140,15 +143,18 @@ nav .content {
     color: #fff;
 }
 
+/* can be used to create 2 column layout */
 .half {
     width: 48%;
     display: inline-block;
 }
 
+/* every 2nd .half element has a margin left value */
 .half:nth-of-type(2n) {
     margin-left: 4%;
 }
 
+/*  used the create a 3 column layout */
 .third {
     width: 33%;
     display: inline-block;
@@ -158,12 +164,17 @@ nav .content {
 #gallery img {
     height: 150px;
 }
+#gallery .column {
+    contain: content;
+}
 
+/* font awesome socail icons*/
 footer .fab {
     font-size: 36px;
     margin-right: 10px;
 }
 
+/* fitst footer icon has no margin left value*/
 footer .fab:first-of-type {
     margin-left: 0;
 }
@@ -173,6 +184,7 @@ table {
     width: 100%;
 }
 
+/* every odd row */
 table tr:nth-child(odd) {
     background-color: #eeeeee;
 }
@@ -181,6 +193,7 @@ table tr th {
     background-color: #ffb2b5;
 }
 
+/* table cell/data  */
 table tr th, table tr td {
     padding: 5px 15px;
 }
@@ -190,6 +203,7 @@ video {
     width: 100%;
 }
 
+/* used for two column layhout in forms */
 form .half {
     width: 45%;
 }
@@ -202,12 +216,14 @@ footer {
     clear: both;
     box-sizing: border-box;
 }
-
+ 
+/* everything in the footer and footer links */
 footer>*, footer ul li a {
     color: #efefef;
     text-decoration: none;
 }
 
+/* footer lists */
 footer ul {
     list-style: none;
     padding: 0;
@@ -217,33 +233,39 @@ footer ul li {
     margin-bottom: 10px;
 }
 
+
 footer #myCanvas {
     margin: 0 auto;
     position: relative;
     bottom: -60px;
 }
 
+/* when mousing over links in the footer, change the text colour */
 footer a:hover {
     color: #ffb2b5;
 }
 
+/* move the social icons down a bit */
 footer #socials {
     margin-top: 40px;
 }
 
+/* styling aimed at a common DELL sqaure type monitor */
 @media screen and (max-width: 1200px) {
     textarea {
         width: 80%;
     }
 }
 
+/* target screens near HD quality */
 @media screen and (max-width: 1710px) {
-    .home.parallax {
+    .parallax {
         background-position: 90% -50%;
         background-size: 140%;
     }
 }
 
+/* target large tablets and netbooks */
 @media screen and (max-width: 1000px) {
     .half {
         width: 100%;
@@ -256,7 +278,7 @@ footer #socials {
 }
 
 @media screen and (max-width: 960px) {
-    .home.parallax {
+    parallax {
         background-position: 90% -10%;
         background-size: 140%;
     }
@@ -272,6 +294,7 @@ footer #socials {
     }
 }
 
+/* target mobile devices */
 @media screen and (max-width: 420px) {
     nav ul {
         text-align: center;
@@ -335,8 +358,6 @@ footer #socials {
     }
     .parallax {
         height: 300px;
-    }
-    .home.parallax {
         background-position: 90% -10%;
         background-size: 250%;
     }

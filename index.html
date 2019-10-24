@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="bakemyday.manifest">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -10,38 +10,22 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/slideshow.css" />
     <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Load font awesome icons for social media icons -->
     <script src="https://kit.fontawesome.com/1b930fa985.js" crossorigin="anonymous"></script>
+
     <script type="text/javascript" src="js/functions.js"></script>
-
-    <script>
-
-
-        window.onload = function () {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                alert("Geolocation is not supported by this browser.");
-            }
-        }
-        function showPosition(pos) {
-            $.post('data/location.php', {
-                'lat': pos.coords.latitude,
-                'lng': pos.coords.longitude
-            }, function (res) {
-                console.log(res);
-            });
-        }
-    </script>
+    <script type="text/javascript" src="js/geolocation.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
 </head>
 
 <!-- slider script is at the end of the file as there were conflicts when script was called in header-->
 
 <body>
-    <div id="serverResponse"></div>
     <nav>
         <div class="content">
             <span class="logo">Bake My Day</span>
             <ul>
+                <!-- onclick show the mobile dropdown menu -->
                 <span id="mob-menu" onclick="showMenu()">
                     <span class="bars"></span>
                     <span class="bars"></span>
@@ -57,15 +41,16 @@
             </ul>
         </div>
     </nav>
-    <div class="home parallax">
+    <div class="parallax">
         <div class="dark-filter">
             <div class=" content">
-                <h1 class="logo">Bake My Day</h1>
+                <h1 class="logo" style="font-size: 54px;">Bake My Day</h1>
                 <h2>Cakes, pastries and catering</h2>
             </div>
         </div>
     </div>
     <div class="content">
+        <!-- half is used for a 2 column style layout -->
         <div class="half left">
             <h3>Lorem ipsum dolor amet velit literally tumeric iceland pinterest kombucha beard church-key.</h3>
             <p>
@@ -96,34 +81,37 @@
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
                     <img src="assets/vegan-sausage-rolls-closeup_600x450.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+                    <div class="text">Vegan Sausage Rolls</div>
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
-                    <img src="assets/Carousel-Carlos_2-1440x620.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
+                    <img src="assets/spongecakes.jpg" style="width:100%">
+                    <div class="text">Delicious Cakes</div>
                 </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="assets/home-parallax.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <br>
 
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="assets/home-parallax.jpg" style="width:100%">
+                <div class="text">A Great Selection</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <div class="sliderArrows" >
+                <a class="prev" onclick="plusSlides(-1)">&#10094; Previous</a>
+                <a class="next" onclick="plusSlides(1)">Next &#10095;</a>
             </div>
         </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
     </div>
     <footer>
         <div class="content">
@@ -138,6 +126,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- Every Day Is A Pastry Day writes to here -->
             <div class="half right">
                 <canvas id="myCanvas" width="550" height="100"></canvas>
             </div>

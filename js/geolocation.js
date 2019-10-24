@@ -1,24 +1,17 @@
+// when the page has loaded get the geolocation of the user
 window.onload = function () {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
     }
 }
-
+// send the geolocation information to location.php
 function showPosition(pos) {
-    this.send('../data/location.php', { 'lat': pos.coords.latitude, 'lng': pos.coords.longitude }, function (res) {
-        console.log(res);
+    $.post('../data/location.php', {
+        'lat': pos.coords.latitude,
+        'lng': pos.coords.longitude
+    }, function () {
+        console.log(showPosition);
     });
-}
-
-const xhr = new XMLHttpRequest();
-
-window.onload = function () {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(saveLocation);
-        xhr.open("POST", "/data/location.php");
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    }
-    function saveLocation(pos) {
-        xhr.send({ 'lat': pos.coords.latitude, 'lng': pos.coords.longitude });
-    }
 }
