@@ -6,6 +6,7 @@ function validateForm()
     if (x == "") 
     {
        errorText = document.getElementById("nameAlert");
+       alert("Please enter your name");
        errorText.innerHTML = "Please enter your name";
        return false;
     }

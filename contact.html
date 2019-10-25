@@ -50,7 +50,7 @@
             <form autocomplete="on" name="contactForm" onsubmit="return validateForm()">
                 <span id="nameAlert"></span>
                 <div class="half">
-                    <input type="text" name="name" placeholder="Name"><br><br>
+                    <input type="text" name="name" placeholder="Name" autofocus><br><br>
                 </div>
                 <div class="half">
                     <input type="email" name="email" placeholder="Email"><br><br>
@@ -64,9 +64,13 @@
                 <textarea name="message" rows="10" cols="40" placeholder="Message"></textarea><br><br>
                 Number of people:<br>
                 <input type="number" value="1" name="number" placeholder="Number of People"><br><br>
-                Alergies:<br>
-                <input type="checkbox" name="Gluten">Gluten <input type="checkbox" name="Nuts">Nuts <input
-                    type="checkbox" name="Lactose">Loctose/Dairy<br><br>
+                <fieldset>
+                    Alergies:<br>
+                    <input type="checkbox" name="alergies" value="Gluten">Gluten 
+                    <input type="checkbox" name="alergies" value="Nuts">Nuts 
+                    <input type="checkbox" name="alergies" value="Lactose">Loctose/Dairy
+                </fieldset>
+                <br><br>
                 Flavour:<br>
                 <input type="radio" value="Catering" name="catering">Chocolate <input type="radio">Strawberry
                 <br><br>

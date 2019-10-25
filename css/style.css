@@ -3,23 +3,25 @@ version: v1.0
 */
 
 @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap');
-
 body {
     padding: 0;
     margin: 0;
 }
 
 /* style every element */
+
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* all divs */
+
 div {
     box-sizing: border-box;
 }
 
 /* .left .right are used to move elements to the left or right */
+
 .left {
     float: left;
 }
@@ -29,18 +31,21 @@ div {
 }
 
 /* hide the mobile menu*/
+
 #mob-menu {
     display: none;
 }
 
 /* fixed nav bar covers the first .content element, 
 this can be used to move the element down to be seen properly */
+
 .movedown-80 {
     position: relative;
     top: 80px;
 }
 
 /* nav bar */
+
 nav {
     width: 100%;
     text-align: center;
@@ -51,6 +56,7 @@ nav {
 }
 
 /* logo within nav bar */
+
 nav .logo {
     font-family: 'Fredericka the Great', cursive;
     font-weight: bold;
@@ -61,6 +67,7 @@ nav .logo {
 }
 
 /* nav menu container */
+
 nav ul {
     width: auto;
     margin: 0 auto;
@@ -70,11 +77,13 @@ nav ul {
 }
 
 /* first list item in nav menu reset to 0 margin left */
+
 nav li:first-of-type {
     margin-left: 0px;
 }
 
 /* remove the dotted list style, put them in a row and set the left margin to 15px*/
+
 nav li {
     list-style: none;
     display: inline-block;
@@ -82,6 +91,7 @@ nav li {
 }
 
 /* nav menu links use the same font as logo */
+
 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -91,6 +101,7 @@ nav ul li a {
 }
 
 /* the main container element */
+
 .content {
     padding: 40px 80px;
     width: 100%;
@@ -104,6 +115,7 @@ nav .content {
 }
 
 /* the header title area on every page */
+
 .parallax {
     height: 350px;
     width: 100%;
@@ -115,6 +127,7 @@ nav .content {
 }
 
 /* put a transparent filter on top of the header images */
+
 .dark-filter {
     background-color: rgba(0, 0, 0, 0.3);
     display: block;
@@ -124,6 +137,7 @@ nav .content {
 }
 
 /* page header titles */
+
 .parallax h1 {
     text-shadow: 2px 2px 0px #000;
     font-size: 42px;
@@ -135,6 +149,7 @@ nav .content {
 }
 
 /* page header subtitles */
+
 .parallax h2 {
     text-shadow: 2px 2px 0px #000;
     font-family: 'Fredericka the Great', cursive;
@@ -144,17 +159,20 @@ nav .content {
 }
 
 /* can be used to create 2 column layout */
+
 .half {
     width: 48%;
     display: inline-block;
 }
 
 /* every 2nd .half element has a margin left value */
+
 .half:nth-of-type(2n) {
     margin-left: 4%;
 }
 
 /*  used the create a 3 column layout */
+
 .third {
     width: 33%;
     display: inline-block;
@@ -163,18 +181,24 @@ nav .content {
 
 #gallery img {
     height: 150px;
+    width: 100%;
+    object-fit: cover;
 }
+
 #gallery .column {
     contain: content;
+    margin-bottom: 10px;
 }
 
 /* font awesome socail icons*/
+
 footer .fab {
     font-size: 36px;
     margin-right: 10px;
 }
 
 /* fitst footer icon has no margin left value*/
+
 footer .fab:first-of-type {
     margin-left: 0;
 }
@@ -185,6 +209,7 @@ table {
 }
 
 /* every odd row */
+
 table tr:nth-child(odd) {
     background-color: #eeeeee;
 }
@@ -194,6 +219,7 @@ table tr th {
 }
 
 /* table cell/data  */
+
 table tr th, table tr td {
     padding: 5px 15px;
 }
@@ -203,7 +229,17 @@ video {
     width: 100%;
 }
 
+#nameAlert {
+    float: left;
+    clear: displ;
+    display: block;
+    width: 100%;
+    color: red;
+    font-weight: bold;
+}
+
 /* used for two column layhout in forms */
+
 form .half {
     width: 45%;
 }
@@ -216,14 +252,16 @@ footer {
     clear: both;
     box-sizing: border-box;
 }
- 
+
 /* everything in the footer and footer links */
+
 footer>*, footer ul li a {
     color: #efefef;
     text-decoration: none;
 }
 
 /* footer lists */
+
 footer ul {
     list-style: none;
     padding: 0;
@@ -233,7 +271,6 @@ footer ul li {
     margin-bottom: 10px;
 }
 
-
 footer #myCanvas {
     margin: 0 auto;
     position: relative;
@@ -241,16 +278,19 @@ footer #myCanvas {
 }
 
 /* when mousing over links in the footer, change the text colour */
+
 footer a:hover {
     color: #ffb2b5;
 }
 
 /* move the social icons down a bit */
+
 footer #socials {
     margin-top: 40px;
 }
 
 /* styling aimed at a common DELL sqaure type monitor */
+
 @media screen and (max-width: 1200px) {
     textarea {
         width: 80%;
@@ -258,6 +298,7 @@ footer #socials {
 }
 
 /* target screens near HD quality */
+
 @media screen and (max-width: 1710px) {
     .parallax {
         background-position: 90% -50%;
@@ -266,6 +307,7 @@ footer #socials {
 }
 
 /* target large tablets and netbooks */
+
 @media screen and (max-width: 1000px) {
     .half {
         width: 100%;
@@ -295,6 +337,7 @@ footer #socials {
 }
 
 /* target mobile devices */
+
 @media screen and (max-width: 420px) {
     nav ul {
         text-align: center;
