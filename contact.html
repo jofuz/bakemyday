@@ -47,7 +47,7 @@
             <h1>Contact Us</h1>
             <p>We can cater to custom requests, no matter the occasion!</p>
             <!-- when form is submitted, run the validation script before sending -->
-            <form autocomplete="on" name="contactForm" onsubmit="return validateForm()">
+            <form autocomplete="on" name="contactForm" onsubmit="return validateForm()" action="contact_form_feedback.php">
                 <span id="nameAlert"></span>
                 <div class="half">
                     <input type="text" name="name" placeholder="Name" autofocus><br><br>
@@ -66,13 +66,13 @@
                 <input type="number" value="1" name="number" placeholder="Number of People"><br><br>
                 <fieldset>
                     Alergies:<br>
-                    <input type="checkbox" name="alergies" value="Gluten">Gluten 
-                    <input type="checkbox" name="alergies" value="Nuts">Nuts 
-                    <input type="checkbox" name="alergies" value="Lactose">Loctose/Dairy
+                    <input type="checkbox" name="alergie1" value="Gluten">Gluten 
+                    <input type="checkbox" name="alergie2" value="Nuts">Nuts 
+                    <input type="checkbox" name="alergie3" value="Lactose">Loctose/Dairy
                 </fieldset>
                 <br><br>
-                Flavour:<br>
-                <input type="radio" value="Catering" name="catering">Chocolate <input type="radio">Strawberry
+                Catering Required:<br>
+                <input type="radio" value="Yes" name="catering">Yes <input type="radio" type="radio" value="No" name="catering">No
                 <br><br>
                 Colour Theme:<br>
                 <input type="color" name="color"><br><br>
